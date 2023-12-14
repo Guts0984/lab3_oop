@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab3_OOP.EditPage">
+
+    <ScrollView BackgroundColor="#F0F0F0">
+        <StackLayout Padding="30" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+
+            <!-- Grid Section -->
+            <Grid 
+                Margin="0,0,0,30"
+                RowSpacing="20"
+                ColumnSpacing="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Updated StackLayout for Labels and Entries -->
+                <StackLayout Grid.Row="0" Grid.Column="0">
+                    <Label Text="Ім'я:"  Margin="0,0,0,10" FontSize="15" TextColor="#2C3E50"/>
+                    <Entry 
+                        x:Name="fullnameInput" 
+                        FontSize="15"
+                        BackgroundColor="#3498DB"
+                        PlaceholderColor="White"
+                        HeightRequest="40" />
+                </StackLayout>
+                <!-- Similar adjustments for other StackLayouts -->
+                <StackLayout Grid.Row="0" Grid.Column="1">
+                    <Label Text="Факультет:" HorizontalOptions="Start" Margin="0,0,0,10" FontSize="15" TextColor="#2C3E50"/>
+                    <Entry 
+                        x:Name="facultyInput" 
+                        FontSize="15"
+                        BackgroundColor="#3498DB"
+                        PlaceholderColor="White"
+                        HeightRequest="40" />
+                </StackLayout>
+                <StackLayout Grid.Row="0" Grid.Column="2">
+                    <Label Text="Група:" HorizontalOptions="Start" Margin="0,0,0,10" FontSize="15" TextColor="#2C3E50"/>
+                    <Entry 
+                        x:Name="groupInput" 
+                        FontSize="15"
+                        BackgroundColor="#3498DB"
+                        PlaceholderColor="White"
+                        HeightRequest="40" />
+                </StackLayout>
+                <StackLayout Grid.Row="1" Grid.Column="0">
+                    <Label Text="Спеціальність:" HorizontalOptions="Start" Margin="0,0,0,10" FontSize="15" TextColor="#2C3E50"/>
+                    <Entry 
+                        x:Name="specialityInput" 
+                        FontSize="15"
+                        BackgroundColor="#3498DB"
+                        PlaceholderColor="White"
+                        HeightRequest="40" />
+                </StackLayout>
+                <StackLayout Grid.Row="1" Grid.Column="1">
+                    <Label Text="Оцінки:" HorizontalOptions="Start" Margin="0,0,0,10" FontSize="15" TextColor="#2C3E50"/>
+                    <Entry 
+                        x:Name="marksInput" 
+                        FontSize="15"
+                        BackgroundColor="#3498DB"
+                        PlaceholderColor="White"
+                        HeightRequest="40" />
+                </StackLayout>
+            </Grid>
+
+            <!-- Buttons Section -->
+            <FlexLayout Direction="Row" HorizontalOptions="Center" JustifyContent="Start" AlignItems="Center" Padding="10, 20, 10, 20">
+                <!-- Updated Button Colors -->
+                <Button 
+                    Text="Зберегти" 
+                    Clicked="SaveButtonClicked"
+                    BackgroundColor="#3498DB"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Margin="0, 0, 10, 0" 
+                    FontSize="15"
+                    FlexLayout.AlignSelf="Start"
+                    MaximumHeightRequest="50" />
+                <Button 
+                    Text="Назад" 
+                    Clicked="ReturnButtonClicked"
+                    BackgroundColor="#3498DB"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    FontSize="15"
+                    FlexLayout.AlignSelf="Start"
+                    MaximumHeightRequest="50" />
+            </FlexLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
